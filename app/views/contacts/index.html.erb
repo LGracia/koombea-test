@@ -1,0 +1,23 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <th scope="row"><%= contact.id %></th>
+        <td><%= contact.name %></td>
+        <td><%= contact.birthday.strftime('%Y %B %-d') %></td>
+        <td><%= contact.address %></td>
+        <td><%= contact.phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

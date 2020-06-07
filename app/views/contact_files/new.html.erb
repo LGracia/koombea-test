@@ -1,0 +1,50 @@
+<%= form_with model: @contact_file, class: "nifty_form" do |f| %>
+  <div class="form-group">
+    <label for="contact_file_csv_file">CSV file</label>
+    <%= f.file_field :csv_file, class: 'form-control-file' %>
+  </div>
+
+  <div class="form-group">
+    <label>Name</label>
+
+    <select name="name" id="name">
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Birthday</label>
+
+    <select name="birthday" id="birthday">
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Phone</label>
+
+    <select name="phone" id="phone">
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Address</label>
+
+    <select name="address" id="address">
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Credit Card</label>
+
+    <select name="credit_card" id="credit_card">
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+
+    <select name="email" id="email">
+    </select>
+  </div>
+
+  <%= f.submit "Create" %>
+<% end %>

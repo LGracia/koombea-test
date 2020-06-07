@@ -1,0 +1,24 @@
+<%= link_to 'Upload a new file', new_contact_file_path %>
+</br>
+<%= link_to 'All contacts', contacts_path %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contact_files.each do |contact_file| %>
+      <tr>
+        <th scope="row"><%= contact_file.id %></th>
+        <td><%= contact_file.csv_file.name %></td>
+        <td><%= contact_file.status %></td>
+        <td><%= contact_file.created_at.strftime('%Y %B %-d') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
